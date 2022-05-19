@@ -1,6 +1,8 @@
 *** Settings ***
 Resource   ../Resources/FullFormResources.robot
 
+Test Teardown    Close Website
+
 *** VARIABLES ***
 ${URL}                  https://www.globalsqa.com/samplepagetest/
 ${BROWSER}              chrome
