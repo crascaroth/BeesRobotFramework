@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220519 09:07:18.913" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Users\crasc\Desktop\Projects\BeesRobotFramework\Tests">
+<suite id="s1-s1" name="FormPage" source="C:\Users\crasc\Desktop\Projects\BeesRobotFramework\Tests\FormPage.robot">
+<test id="s1-s1-t1" name="Test Case 01: Everything Right" line="11">
+<kw name="Given Client in page ${URL} with ${BROWSER}" library="FullFormResources" sourcename="Given Client in page ${URL} with ${BROWSER}">
+<kw name="Name" library="FakerLibrary">
+<var>${NAME}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20220519 09:07:19.627" level="INFO">${NAME} = Luana Pinto</msg>
+<status status="PASS" starttime="20220519 09:07:19.627" endtime="20220519 09:07:19.627"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL}</var>
+<msg timestamp="20220519 09:07:19.627" level="INFO">${EMAIL} = ana-lauracavalcanti@example.org</msg>
+<status status="PASS" starttime="20220519 09:07:19.627" endtime="20220519 09:07:19.627"/>
+</kw>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=1</arg>
+<arg>max=99</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 09:07:19.628" level="INFO">${RANDOMNUMBER} = 79</msg>
+<status status="PASS" starttime="20220519 09:07:19.628" endtime="20220519 09:07:19.628"/>
+</kw>
+<kw name="Words" library="FakerLibrary">
+<var>${COMMENT}</var>
+<arg>nb=${RANDOMNUMBER}</arg>
+<doc>Generate a tuple of words.</doc>
+<msg timestamp="20220519 09:07:19.628" level="INFO">${COMMENT} = ['qui', 'impedit', 'optio', 'sit', 'officiis', 'repudiandae', 'sed', 'delectus', 'quas', 'dignissimos', 'harum', 'modi', 'beatae', 'exercitationem', 'odio', 'facere', 'ut', 'occaecati', 'aspernatur', ...</msg>
+<status status="PASS" starttime="20220519 09:07:19.628" endtime="20220519 09:07:19.628"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 09:07:19.629" level="INFO">${NAME} = Luana Pinto</msg>
+<status status="PASS" starttime="20220519 09:07:19.629" endtime="20220519 09:07:19.629"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 09:07:19.629" level="INFO">${EMAIL} = ana-lauracavalcanti@example.org</msg>
+<status status="PASS" starttime="20220519 09:07:19.629" endtime="20220519 09:07:19.629"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${COMMENT}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 09:07:19.630" level="INFO">${COMMENT} = ['qui', 'impedit', 'optio', 'sit', 'officiis', 'repudiandae', 'sed', 'delectus', 'quas', 'dignissimos', 'harum', 'modi', 'beatae', 'exercitationem', 'odio', 'facere', 'ut', 'occaecati', 'aspernatur', ...</msg>
+<status status="PASS" starttime="20220519 09:07:19.629" endtime="20220519 09:07:19.630"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--start-maximized")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220519 09:07:19.630" level="INFO">Opening browser 'chrome' to base url 'https://www.globalsqa.com/samplepagetest/'.</msg>
+<status status="PASS" starttime="20220519 09:07:19.630" endtime="20220519 09:07:27.263"/>
+</kw>
+<status status="PASS" starttime="20220519 09:07:19.626" endtime="20220519 09:07:27.264"/>
+</kw>
+<kw name="When Type Everything Correctly">
+<msg timestamp="20220519 09:07:27.272" level="FAIL">No keyword with name 'When Type Everything Correctly' found.</msg>
+<status status="FAIL" starttime="20220519 09:07:27.272" endtime="20220519 09:07:27.272"/>
+</kw>
+<kw name="Then Redirected to Success page">
+<status status="NOT RUN" starttime="20220519 09:07:27.279" endtime="20220519 09:07:27.279"/>
+</kw>
+<status status="FAIL" starttime="20220519 09:07:19.625" endtime="20220519 09:07:27.280">No keyword with name 'When Type Everything Correctly' found.</status>
+</test>
+<status status="FAIL" starttime="20220519 09:07:18.940" endtime="20220519 09:07:27.281"/>
+</suite>
+<status status="FAIL" starttime="20220519 09:07:18.915" endtime="20220519 09:07:27.282"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="FormPage">Tests.FormPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
