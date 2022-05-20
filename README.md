@@ -1,3 +1,6 @@
+
+## Infelizmente o Site que escolhi para desenvolver tem 1 problema que nao consegui solucionar, q é um Footer q aparece qdo ocorre a automatização, tem q ser clicado manualmente para desaparecer
+
 [image](https://user-images.githubusercontent.com/74428545/169338341-20cf11c4-1831-4b06-91a9-497e3198a13d.png)
 
 
