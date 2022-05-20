@@ -121,7 +121,7 @@ AND Choose Expertise
     Scroll Element Into View    ${AUTOMATION_TESTING_LOCATION}
     IF                          ${RANDOMNUMBER} == 1
     Select Checkbox             ${AUTOMATION_TESTING_LOCATION}
-    IF                          '${EXPERTISE}'!='${EMPTY}'
+    IF                          '${EXPERTISE}' != '${EMPTY}'
     ${EXPERTISE}                Set Variable                      Automation Testing
     ELSE
     Catenate                    ${EXPERTISE}                      , Automation Testing    
@@ -132,7 +132,7 @@ AND Choose Expertise
     Scroll Element Into View    ${MANUAL_TESTING_LOCATION}
     IF                          ${RANDOMNUMBER} == 1
     Select Checkbox             ${MANUAL_TESTING_LOCATION}
-    IF                          '${EXPERTISE}'!='${EMPTY}'
+    IF                          '${EXPERTISE}' != '${EMPTY}'
     ${EXPERTISE}                Set Variable                  Manual Testing
     ELSE
     Catenate                    ${EXPERTISE}                  , Manual Testing    
@@ -206,4 +206,4 @@ Then Redirected to Success page
 
 
 Then do not Redirect to Success page
-    Location Should Be       https://www.globalsqa.com/
+    Location Should Be       https://www.globalsqa.com/samplepagetest/

@@ -1,0 +1,1382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220519 21:27:05.004" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Users\crasc\Desktop\Projects\BeesRobotFramework\Tests">
+<suite id="s1-s1" name="FormPage" source="C:\Users\crasc\Desktop\Projects\BeesRobotFramework\Tests\FormPage.robot">
+<test id="s1-s1-t1" name="Test Case 01: Everything Right" line="13">
+<kw name="Given Client in page ${URL} with ${BROWSER}" library="FullFormResources" sourcename="Given Client in page ${URL} with ${BROWSER}">
+<kw name="Name" library="FakerLibrary">
+<var>${NAME}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20220519 21:27:05.737" level="INFO">${NAME} = Igor Gomes</msg>
+<status status="PASS" starttime="20220519 21:27:05.737" endtime="20220519 21:27:05.737"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL}</var>
+<msg timestamp="20220519 21:27:05.737" level="INFO">${EMAIL} = vitor-hugopereira@example.net</msg>
+<status status="PASS" starttime="20220519 21:27:05.737" endtime="20220519 21:27:05.737"/>
+</kw>
+<kw name="Random Int" library="FakerLibrary">
+<var>${EXPERIENCE}</var>
+<arg>min=1</arg>
+<arg>max=6</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:27:05.738" level="INFO">${EXPERIENCE} = 6</msg>
+<status status="PASS" starttime="20220519 21:27:05.737" endtime="20220519 21:27:05.738"/>
+</kw>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=1</arg>
+<arg>max=99</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:27:05.738" level="INFO">${RANDOMNUMBER} = 60</msg>
+<status status="PASS" starttime="20220519 21:27:05.738" endtime="20220519 21:27:05.738"/>
+</kw>
+<kw name="Words" library="FakerLibrary">
+<var>${COMMENT}</var>
+<arg>nb=${RANDOMNUMBER}</arg>
+<doc>Generate a tuple of words.</doc>
+<msg timestamp="20220519 21:27:05.739" level="INFO">${COMMENT} = ['nulla', 'quae', 'ipsam', 'ipsa', 'expedita', 'id', 'voluptatibus', 'quos', 'modi', 'provident', 'laborum', 'quasi', 'perferendis', 'sint', 'mollitia', 'voluptatum', 'corporis', 'fugit', 'perspiciati...</msg>
+<status status="PASS" starttime="20220519 21:27:05.738" endtime="20220519 21:27:05.739"/>
+</kw>
+<kw name="Hostname" library="FakerLibrary">
+<var>${TEMP}</var>
+<doc>Produce a hostname with specified number of subdomain levels.</doc>
+<msg timestamp="20220519 21:27:05.739" level="INFO">${TEMP} = srv-50.cardoso.org</msg>
+<status status="PASS" starttime="20220519 21:27:05.739" endtime="20220519 21:27:05.739"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${WEBSITE}</arg>
+<arg>https://${TEMP}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:05.740" level="INFO">${WEBSITE} = https://srv-50.cardoso.org</msg>
+<status status="PASS" starttime="20220519 21:27:05.739" endtime="20220519 21:27:05.740"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${NAME}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:05.741" level="INFO">${NAME} = Igor Gomes</msg>
+<status status="PASS" starttime="20220519 21:27:05.740" endtime="20220519 21:27:05.741"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:05.741" level="INFO">${EMAIL} = vitor-hugopereira@example.net</msg>
+<status status="PASS" starttime="20220519 21:27:05.741" endtime="20220519 21:27:05.741"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:05.741" level="INFO">${EXPERIENCE} = 6</msg>
+<status status="PASS" starttime="20220519 21:27:05.741" endtime="20220519 21:27:05.741"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EDUCATION}</arg>
+<arg>aa</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:05.742" level="INFO">${EDUCATION} = aa</msg>
+<status status="PASS" starttime="20220519 21:27:05.742" endtime="20220519 21:27:05.742"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${COMMENT}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:05.743" level="INFO">${COMMENT} = ['nulla', 'quae', 'ipsam', 'ipsa', 'expedita', 'id', 'voluptatibus', 'quos', 'modi', 'provident', 'laborum', 'quasi', 'perferendis', 'sint', 'mollitia', 'voluptatum', 'corporis', 'fugit', 'perspiciati...</msg>
+<status status="PASS" starttime="20220519 21:27:05.743" endtime="20220519 21:27:05.743"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SUBMIT_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; p.contact-submit &gt; button</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:05.744" level="INFO">${SUBMIT_LOCATION} = css=#contact-form-2599 &gt; form &gt; p.contact-submit &gt; button</msg>
+<status status="PASS" starttime="20220519 21:27:05.743" endtime="20220519 21:27:05.744"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--start-maximized")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220519 21:27:05.744" level="INFO">Opening browser 'chrome' to base url 'https://www.globalsqa.com/samplepagetest/'.</msg>
+<status status="PASS" starttime="20220519 21:27:05.744" endtime="20220519 21:27:11.678"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:05.736" endtime="20220519 21:27:11.678"/>
+</kw>
+<kw name="When Type Name Correctly" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${NAME_LOCATION}</arg>
+<arg>css=#g2599-name</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:11.680" level="INFO">${NAME_LOCATION} = css=#g2599-name</msg>
+<status status="PASS" starttime="20220519 21:27:11.679" endtime="20220519 21:27:11.680"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${NAME_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:11.680" endtime="20220519 21:27:11.980"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NAME_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:27:11.980" endtime="20220519 21:27:12.001"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NAME_LOCATION}</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:27:12.002" level="INFO">Typing text 'Igor Gomes' into text field 'css=#g2599-name'.</msg>
+<status status="PASS" starttime="20220519 21:27:12.001" endtime="20220519 21:27:12.085"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:11.678" endtime="20220519 21:27:12.085"/>
+</kw>
+<kw name="AND Type Email Correctly" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${EMAIL_LOCATION}</arg>
+<arg>css=#g2599-email</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:12.087" level="INFO">${EMAIL_LOCATION} = css=#g2599-email</msg>
+<status status="PASS" starttime="20220519 21:27:12.086" endtime="20220519 21:27:12.087"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${EMAIL_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:12.087" endtime="20220519 21:27:12.369"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:27:12.369" endtime="20220519 21:27:12.387"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_LOCATION}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:27:12.388" level="INFO">Typing text 'vitor-hugopereira@example.net' into text field 'css=#g2599-email'.</msg>
+<status status="PASS" starttime="20220519 21:27:12.387" endtime="20220519 21:27:12.501"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:12.086" endtime="20220519 21:27:12.502"/>
+</kw>
+<kw name="AND Type Website Correctly" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${WEBSITE_LOCATION}</arg>
+<arg>css=#g2599-website</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:12.503" level="INFO">${WEBSITE_LOCATION} = css=#g2599-website</msg>
+<status status="PASS" starttime="20220519 21:27:12.502" endtime="20220519 21:27:12.503"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${WEBSITE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:12.503" endtime="20220519 21:27:12.788"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WEBSITE_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:27:12.788" endtime="20220519 21:27:12.803"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${WEBSITE_LOCATION}</arg>
+<arg>${WEBSITE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:27:12.803" level="INFO">Typing text 'https://srv-50.cardoso.org' into text field 'css=#g2599-website'.</msg>
+<status status="PASS" starttime="20220519 21:27:12.803" endtime="20220519 21:27:12.939"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:12.502" endtime="20220519 21:27:12.939"/>
+</kw>
+<kw name="AND Choose Experience" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>css=#g2599-experienceinyears</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:12.940" level="INFO">${EXPERIENCE_LOCATION} = css=#g2599-experienceinyears</msg>
+<status status="PASS" starttime="20220519 21:27:12.939" endtime="20220519 21:27:12.940"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:12.940" endtime="20220519 21:27:13.225"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:27:13.225" endtime="20220519 21:27:13.241"/>
+</kw>
+<if>
+<branch type="IF" condition="${EXPERIENCE} == 1">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>0-1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.242" endtime="20220519 21:27:13.242"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>0-1</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.242" endtime="20220519 21:27:13.242"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>0-1</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.242" endtime="20220519 21:27:13.242"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:13.242" endtime="20220519 21:27:13.242"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 2">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>1-3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.243" endtime="20220519 21:27:13.243"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>1-3</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.243" endtime="20220519 21:27:13.243"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>1-3</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.243" endtime="20220519 21:27:13.243"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:13.242" endtime="20220519 21:27:13.243"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 3">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>3-5</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.243" endtime="20220519 21:27:13.243"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>3-5</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.243" endtime="20220519 21:27:13.243"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>3-5</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.243" endtime="20220519 21:27:13.243"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:13.243" endtime="20220519 21:27:13.243"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 4">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>5-7</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.244" endtime="20220519 21:27:13.244"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>5-7</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.244" endtime="20220519 21:27:13.244"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>5-7</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.244" endtime="20220519 21:27:13.244"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:13.244" endtime="20220519 21:27:13.244"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 5">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>7-10</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.244" endtime="20220519 21:27:13.244"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>7-10</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.244" endtime="20220519 21:27:13.244"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>7-10</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.244" endtime="20220519 21:27:13.245"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:13.244" endtime="20220519 21:27:13.245"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 6">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>10+</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220519 21:27:13.245" level="INFO">Selecting options from selection list 'css=#g2599-experienceinyears' by value 10+.</msg>
+<status status="PASS" starttime="20220519 21:27:13.245" endtime="20220519 21:27:13.303"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>10+</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20220519 21:27:13.304" level="INFO">Verifying list 'css=#g2599-experienceinyears' has option [ 10+ ] selected.</msg>
+<msg timestamp="20220519 21:27:13.312" level="INFO">Current page contains list 'css=#g2599-experienceinyears'.</msg>
+<status status="PASS" starttime="20220519 21:27:13.303" endtime="20220519 21:27:13.406"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>10+</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:13.407" level="INFO">${EXPERIENCE} = 10+</msg>
+<status status="PASS" starttime="20220519 21:27:13.406" endtime="20220519 21:27:13.407"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:13.245" endtime="20220519 21:27:13.407"/>
+</branch>
+<status status="PASS" starttime="20220519 21:27:13.241" endtime="20220519 21:27:13.407"/>
+</if>
+<status status="PASS" starttime="20220519 21:27:12.939" endtime="20220519 21:27:13.407"/>
+</kw>
+<kw name="AND Choose Expertise" library="FullFormResources">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERTISE}</arg>
+<arg>expertise</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:13.408" level="INFO">${EXPERTISE} = expertise</msg>
+<status status="PASS" starttime="20220519 21:27:13.407" endtime="20220519 21:27:13.408"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${FUNCTIONAL_TESTING_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(2) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:13.409" level="INFO">${FUNCTIONAL_TESTING_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(2) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:27:13.408" endtime="20220519 21:27:13.409"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${AUTOMATION_TESTING_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(4) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:13.410" level="INFO">${AUTOMATION_TESTING_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(4) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:27:13.409" endtime="20220519 21:27:13.410"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${MANUAL_TESTING_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(6) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:13.411" level="INFO">${MANUAL_TESTING_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(6) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:27:13.410" endtime="20220519 21:27:13.411"/>
+</kw>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=0</arg>
+<arg>max=1</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:27:13.412" level="INFO">${RANDOMNUMBER} = 0</msg>
+<status status="PASS" starttime="20220519 21:27:13.411" endtime="20220519 21:27:13.412"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${FUNCTIONAL_TESTING_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:13.412" endtime="20220519 21:27:13.691"/>
+</kw>
+<if>
+<branch type="IF" condition="${RANDOMNUMBER} == 1">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${FUNCTIONAL_TESTING_LOCATION}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.691" endtime="20220519 21:27:13.691"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${EXPERTISE}</var>
+<arg>Functional Testing</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:13.692" endtime="20220519 21:27:13.692"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:13.691" endtime="20220519 21:27:13.692"/>
+</branch>
+<status status="PASS" starttime="20220519 21:27:13.691" endtime="20220519 21:27:13.692"/>
+</if>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=0</arg>
+<arg>max=1</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:27:13.692" level="INFO">${RANDOMNUMBER} = 1</msg>
+<status status="PASS" starttime="20220519 21:27:13.692" endtime="20220519 21:27:13.692"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${AUTOMATION_TESTING_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:13.692" endtime="20220519 21:27:13.974"/>
+</kw>
+<if>
+<branch type="IF" condition="${RANDOMNUMBER} == 1">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${AUTOMATION_TESTING_LOCATION}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220519 21:27:13.975" level="INFO">Selecting checkbox 'css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(4) &gt; input'.</msg>
+<status status="PASS" starttime="20220519 21:27:13.974" endtime="20220519 21:27:14.039"/>
+</kw>
+<if>
+<branch type="IF" condition="'${EXPERTISE}' != '${EMPTY}'">
+<kw name="Set Variable" library="BuiltIn">
+<var>${EXPERTISE}</var>
+<arg>Automation Testing</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220519 21:27:14.040" level="INFO">${EXPERTISE} = Automation Testing</msg>
+<status status="PASS" starttime="20220519 21:27:14.040" endtime="20220519 21:27:14.040"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:14.040" endtime="20220519 21:27:14.040"/>
+</branch>
+<branch type="ELSE">
+<kw name="Catenate" library="BuiltIn">
+<arg>${EXPERTISE}</arg>
+<arg>, Automation Testing</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.041" endtime="20220519 21:27:14.041"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:14.040" endtime="20220519 21:27:14.041"/>
+</branch>
+<status status="PASS" starttime="20220519 21:27:14.039" endtime="20220519 21:27:14.041"/>
+</if>
+<status status="PASS" starttime="20220519 21:27:13.974" endtime="20220519 21:27:14.041"/>
+</branch>
+<status status="PASS" starttime="20220519 21:27:13.974" endtime="20220519 21:27:14.041"/>
+</if>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=0</arg>
+<arg>max=1</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:27:14.041" level="INFO">${RANDOMNUMBER} = 0</msg>
+<status status="PASS" starttime="20220519 21:27:14.041" endtime="20220519 21:27:14.041"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${MANUAL_TESTING_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:14.041" endtime="20220519 21:27:14.330"/>
+</kw>
+<if>
+<branch type="IF" condition="${RANDOMNUMBER} == 1">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${MANUAL_TESTING_LOCATION}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.330" endtime="20220519 21:27:14.331"/>
+</kw>
+<if>
+<branch type="IF" condition="'${EXPERTISE}' != '${EMPTY}'">
+<kw name="Set Variable" library="BuiltIn">
+<var>${EXPERTISE}</var>
+<arg>Manual Testing</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.331" endtime="20220519 21:27:14.331"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:14.331" endtime="20220519 21:27:14.331"/>
+</branch>
+<branch type="ELSE">
+<kw name="Catenate" library="BuiltIn">
+<arg>${EXPERTISE}</arg>
+<arg>, Manual Testing</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.331" endtime="20220519 21:27:14.331"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:14.331" endtime="20220519 21:27:14.331"/>
+</branch>
+<status status="NOT RUN" starttime="20220519 21:27:14.331" endtime="20220519 21:27:14.331"/>
+</if>
+<status status="NOT RUN" starttime="20220519 21:27:14.330" endtime="20220519 21:27:14.331"/>
+</branch>
+<status status="PASS" starttime="20220519 21:27:14.330" endtime="20220519 21:27:14.331"/>
+</if>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERTISE}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:14.332" level="INFO">${EXPERTISE} = Automation Testing</msg>
+<status status="PASS" starttime="20220519 21:27:14.331" endtime="20220519 21:27:14.332"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:13.407" endtime="20220519 21:27:14.332"/>
+</kw>
+<kw name="AND Choose Education" library="FullFormResources">
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=1</arg>
+<arg>max=3</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:27:14.333" level="INFO">${RANDOMNUMBER} = 1</msg>
+<status status="PASS" starttime="20220519 21:27:14.333" endtime="20220519 21:27:14.333"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${GRADUATE_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(2) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:14.334" level="INFO">${GRADUATE_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(2) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:27:14.333" endtime="20220519 21:27:14.335"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${UNGRADUATE_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(4) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:14.336" level="INFO">${UNGRADUATE_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(4) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:27:14.335" endtime="20220519 21:27:14.336"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${POST_GRADUATE_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(6) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:14.337" level="INFO">${POST_GRADUATE_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(6) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:27:14.336" endtime="20220519 21:27:14.337"/>
+</kw>
+<if>
+<branch type="IF" condition="${RANDOMNUMBER} == 1">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${GRADUATE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:14.337" endtime="20220519 21:27:14.632"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${GRADUATE_LOCATION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:27:14.633" level="INFO">Clicking element 'css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(2) &gt; input'.</msg>
+<status status="PASS" starttime="20220519 21:27:14.632" endtime="20220519 21:27:14.671"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${EDUCATION}</var>
+<arg>${GRADUATE_LOCATION}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:27:14.686" level="INFO">${EDUCATION} = Graduate</msg>
+<status status="PASS" starttime="20220519 21:27:14.671" endtime="20220519 21:27:14.686"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:14.337" endtime="20220519 21:27:14.686"/>
+</branch>
+<branch type="ELSE IF" condition="${RANDOMNUMBER} == 2">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${UNGRADUATE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.686" endtime="20220519 21:27:14.686"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UNGRADUATE_LOCATION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.686" endtime="20220519 21:27:14.686"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${EDUCATION}</var>
+<arg>${UNGRADUATE_LOCATION}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.686" endtime="20220519 21:27:14.686"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:14.686" endtime="20220519 21:27:14.686"/>
+</branch>
+<branch type="ELSE IF" condition="${RANDOMNUMBER} == 3">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${POST_GRADUATE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.686" endtime="20220519 21:27:14.686"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${POST_GRADUATE_LOCATION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.686" endtime="20220519 21:27:14.687"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${EDUCATION}</var>
+<arg>${POST_GRADUATE_LOCATION}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:27:14.687" endtime="20220519 21:27:14.687"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:27:14.686" endtime="20220519 21:27:14.687"/>
+</branch>
+<status status="PASS" starttime="20220519 21:27:14.337" endtime="20220519 21:27:14.687"/>
+</if>
+<status status="PASS" starttime="20220519 21:27:14.332" endtime="20220519 21:27:14.687"/>
+</kw>
+<kw name="AND Comment" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${COMMENT_LOCATION}</arg>
+<arg>css=#contact-form-comment-g2599-comment</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:27:14.688" level="INFO">${COMMENT_LOCATION} = css=#contact-form-comment-g2599-comment</msg>
+<status status="PASS" starttime="20220519 21:27:14.687" endtime="20220519 21:27:14.688"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${COMMENT_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:14.688" endtime="20220519 21:27:14.976"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${COMMENT_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:27:14.976" endtime="20220519 21:27:14.993"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${COMMENT_LOCATION}</arg>
+<arg>${COMMENT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:27:14.994" level="INFO">Typing text '['nulla', 'quae', 'ipsam', 'ipsa', 'expedita', 'id', 'voluptatibus', 'quos', 'modi', 'provident', 'laborum', 'quasi', 'perferendis', 'sint', 'mollitia', 'voluptatum', 'corporis', 'fugit', 'perspiciatis', 'molestias', 'repellendus', 'iure', 'a', 'tempora', 'praesentium', 'cupiditate', 'nulla', 'velit', 'ratione', 'ipsam', 'quaerat', 'similique', 'nisi', 'quibusdam', 'sapiente', 'autem', 'placeat', 'quibusdam', 'eveniet', 'repellendus', 'laborum', 'fugit', 'omnis', 'recusandae', 'ipsam', 'maiores', 'ipsa', 'in', 'nobis', 'molestiae', 'provident', 'debitis', 'similique', 'optio', 'illo', 'possimus', 'praesentium', 'omnis', 'molestiae', 'quo']' into text field 'css=#contact-form-comment-g2599-comment'.</msg>
+<status status="PASS" starttime="20220519 21:27:14.993" endtime="20220519 21:27:15.659"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:14.687" endtime="20220519 21:27:15.659"/>
+</kw>
+<kw name="AND Submit" library="FullFormResources">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${SUBMIT_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:27:15.660" endtime="20220519 21:27:15.962"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SUBMIT_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:27:15.962" endtime="20220519 21:27:15.978"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SUBMIT_LOCATION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220519 21:27:15.978" level="INFO">Clicking button 'css=#contact-form-2599 &gt; form &gt; p.contact-submit &gt; button'.</msg>
+<status status="PASS" starttime="20220519 21:27:15.978" endtime="20220519 21:27:24.091"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:15.659" endtime="20220519 21:27:24.091"/>
+</kw>
+<kw name="Then Redirected to Success page" library="FullFormResources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${NAME_FINISH_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(1)</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 21:27:24.093" level="INFO">${NAME_FINISH_LOCATION} = css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(1)</msg>
+<status status="PASS" starttime="20220519 21:27:24.092" endtime="20220519 21:27:24.093"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${EMAIL_FINISH_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(2)</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 21:27:24.095" level="INFO">${EMAIL_FINISH_LOCATION} = css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(2)</msg>
+<status status="PASS" starttime="20220519 21:27:24.093" endtime="20220519 21:27:24.095"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${WEBSITE_FINISH_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(3)</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 21:27:24.096" level="INFO">${WEBSITE_FINISH_LOCATION} = css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(3)</msg>
+<status status="PASS" starttime="20220519 21:27:24.095" endtime="20220519 21:27:24.096"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${EXPERIENCE_FINISH_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(4)</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 21:27:24.098" level="INFO">${EXPERIENCE_FINISH_LOCATION} = css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(4)</msg>
+<status status="PASS" starttime="20220519 21:27:24.096" endtime="20220519 21:27:24.098"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${EXPERTISE_FINISH_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(5)</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 21:27:24.100" level="INFO">${EXPERTISE_FINISH_LOCATION} = css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(5)</msg>
+<status status="PASS" starttime="20220519 21:27:24.098" endtime="20220519 21:27:24.100"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${EDUCATION_FINISH_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(6)</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 21:27:24.102" level="INFO">${EDUCATION_FINISH_LOCATION} = css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(6)</msg>
+<status status="PASS" starttime="20220519 21:27:24.101" endtime="20220519 21:27:24.102"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${COMMENT_FINISH_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(7)</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220519 21:27:24.104" level="INFO">${COMMENT_FINISH_LOCATION} = css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(7)</msg>
+<status status="PASS" starttime="20220519 21:27:24.102" endtime="20220519 21:27:24.104"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${NAME_FINISH_LOCATION}</arg>
+<arg>Name: ${NAME}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220519 21:27:24.105" level="INFO">Verifying element 'css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(1)' contains exact text 'Name: Igor Gomes'.</msg>
+<status status="PASS" starttime="20220519 21:27:24.104" endtime="20220519 21:27:24.127"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${EMAIL_FINISH_LOCATION}</arg>
+<arg>Email: ${EMAIL}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220519 21:27:24.128" level="INFO">Verifying element 'css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(2)' contains exact text 'Email: vitor-hugopereira@example.net'.</msg>
+<status status="PASS" starttime="20220519 21:27:24.128" endtime="20220519 21:27:24.146"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${WEBSITE_FINISH_LOCATION}</arg>
+<arg>Website: ${WEBSITE}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220519 21:27:24.146" level="INFO">Verifying element 'css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(3)' contains exact text 'Website: https://srv-50.cardoso.org'.</msg>
+<status status="PASS" starttime="20220519 21:27:24.146" endtime="20220519 21:27:24.164"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_FINISH_LOCATION}</arg>
+<arg>Experience (In Years): ${EXPERIENCE}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220519 21:27:24.165" level="INFO">Verifying element 'css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(4)' contains exact text 'Experience (In Years): 10+'.</msg>
+<status status="PASS" starttime="20220519 21:27:24.165" endtime="20220519 21:27:24.185"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${EXPERTISE_FINISH_LOCATION}</arg>
+<arg>Expertise :: ${EXPERTISE}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220519 21:27:24.186" level="INFO">Verifying element 'css=#contact-form-2599 &gt; blockquote &gt; p:nth-child(5)' contains exact text 'Expertise :: Automation Testing'.</msg>
+<status status="PASS" starttime="20220519 21:27:24.185" endtime="20220519 21:27:24.205"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:24.091" endtime="20220519 21:27:24.205"/>
+</kw>
+<kw name="Close Website" library="FullFormResources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:27:24.206" endtime="20220519 21:27:26.473"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:24.206" endtime="20220519 21:27:26.473"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:05.735" endtime="20220519 21:27:26.474"/>
+</test>
+<test id="s1-s1-t2" name="Test Case 02: No Email" line="26">
+<kw name="Given Client in page ${URL} with ${BROWSER}" library="FullFormResources" sourcename="Given Client in page ${URL} with ${BROWSER}">
+<kw name="Name" library="FakerLibrary">
+<var>${NAME}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20220519 21:27:26.479" level="INFO">${NAME} = Thiago Dias</msg>
+<status status="PASS" starttime="20220519 21:27:26.478" endtime="20220519 21:27:26.479"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL}</var>
+<msg timestamp="20220519 21:27:26.480" level="INFO">${EMAIL} = rcorreia@example.com</msg>
+<status status="PASS" starttime="20220519 21:27:26.480" endtime="20220519 21:27:26.480"/>
+</kw>
+<kw name="Random Int" library="FakerLibrary">
+<var>${EXPERIENCE}</var>
+<arg>min=1</arg>
+<arg>max=6</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:27:26.482" level="INFO">${EXPERIENCE} = 5</msg>
+<status status="PASS" starttime="20220519 21:27:26.481" endtime="20220519 21:27:26.482"/>
+</kw>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=1</arg>
+<arg>max=99</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:27:26.483" level="INFO">${RANDOMNUMBER} = 66</msg>
+<status status="PASS" starttime="20220519 21:27:26.482" endtime="20220519 21:27:26.483"/>
+</kw>
+<kw name="Words" library="FakerLibrary">
+<var>${COMMENT}</var>
+<arg>nb=${RANDOMNUMBER}</arg>
+<doc>Generate a tuple of words.</doc>
+<msg timestamp="20220519 21:27:26.485" level="INFO">${COMMENT} = ['accusamus', 'facilis', 'labore', 'incidunt', 'esse', 'aliquid', 'voluptatem', 'odio', 'sed', 'molestias', 'accusamus', 'magni', 'iste', 'aspernatur', 'architecto', 'perspiciatis', 'blanditiis', 'und...</msg>
+<status status="PASS" starttime="20220519 21:27:26.484" endtime="20220519 21:27:26.485"/>
+</kw>
+<kw name="Hostname" library="FakerLibrary">
+<var>${TEMP}</var>
+<doc>Produce a hostname with specified number of subdomain levels.</doc>
+<msg timestamp="20220519 21:27:26.486" level="INFO">${TEMP} = desktop-48.alves.com</msg>
+<status status="PASS" starttime="20220519 21:27:26.486" endtime="20220519 21:27:26.487"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${WEBSITE}</arg>
+<arg>https://${TEMP}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:26.488" level="INFO">${WEBSITE} = https://desktop-48.alves.com</msg>
+<status status="PASS" starttime="20220519 21:27:26.487" endtime="20220519 21:27:26.488"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${NAME}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:26.490" level="INFO">${NAME} = Thiago Dias</msg>
+<status status="PASS" starttime="20220519 21:27:26.489" endtime="20220519 21:27:26.490"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:26.491" level="INFO">${EMAIL} = rcorreia@example.com</msg>
+<status status="PASS" starttime="20220519 21:27:26.490" endtime="20220519 21:27:26.492"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:26.493" level="INFO">${EXPERIENCE} = 5</msg>
+<status status="PASS" starttime="20220519 21:27:26.492" endtime="20220519 21:27:26.493"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EDUCATION}</arg>
+<arg>aa</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:26.495" level="INFO">${EDUCATION} = aa</msg>
+<status status="PASS" starttime="20220519 21:27:26.494" endtime="20220519 21:27:26.495"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${COMMENT}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:26.496" level="INFO">${COMMENT} = ['accusamus', 'facilis', 'labore', 'incidunt', 'esse', 'aliquid', 'voluptatem', 'odio', 'sed', 'molestias', 'accusamus', 'magni', 'iste', 'aspernatur', 'architecto', 'perspiciatis', 'blanditiis', 'und...</msg>
+<status status="PASS" starttime="20220519 21:27:26.495" endtime="20220519 21:27:26.497"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SUBMIT_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; p.contact-submit &gt; button</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:27:26.498" level="INFO">${SUBMIT_LOCATION} = css=#contact-form-2599 &gt; form &gt; p.contact-submit &gt; button</msg>
+<status status="PASS" starttime="20220519 21:27:26.497" endtime="20220519 21:27:26.498"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--start-maximized")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220519 21:27:26.500" level="INFO">Opening browser 'chrome' to base url 'https://www.globalsqa.com/samplepagetest/'.</msg>
+<status status="PASS" starttime="20220519 21:27:26.499" endtime="20220519 21:28:16.062"/>
+</kw>
+<status status="PASS" starttime="20220519 21:27:26.477" endtime="20220519 21:28:16.062"/>
+</kw>
+<kw name="When Type Name Correctly" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${NAME_LOCATION}</arg>
+<arg>css=#g2599-name</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:16.064" level="INFO">${NAME_LOCATION} = css=#g2599-name</msg>
+<status status="PASS" starttime="20220519 21:28:16.063" endtime="20220519 21:28:16.064"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${NAME_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:16.065" endtime="20220519 21:28:16.598"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NAME_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:28:16.599" endtime="20220519 21:28:16.620"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NAME_LOCATION}</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:28:16.620" level="INFO">Typing text 'Thiago Dias' into text field 'css=#g2599-name'.</msg>
+<status status="PASS" starttime="20220519 21:28:16.620" endtime="20220519 21:28:16.723"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:16.062" endtime="20220519 21:28:16.723"/>
+</kw>
+<kw name="AND Type Website Correctly" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${WEBSITE_LOCATION}</arg>
+<arg>css=#g2599-website</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:16.725" level="INFO">${WEBSITE_LOCATION} = css=#g2599-website</msg>
+<status status="PASS" starttime="20220519 21:28:16.724" endtime="20220519 21:28:16.725"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${WEBSITE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:16.725" endtime="20220519 21:28:17.018"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WEBSITE_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:28:17.018" endtime="20220519 21:28:17.049"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${WEBSITE_LOCATION}</arg>
+<arg>${WEBSITE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:28:17.050" level="INFO">Typing text 'https://desktop-48.alves.com' into text field 'css=#g2599-website'.</msg>
+<status status="PASS" starttime="20220519 21:28:17.049" endtime="20220519 21:28:17.154"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:16.724" endtime="20220519 21:28:17.154"/>
+</kw>
+<kw name="AND Choose Experience" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>css=#g2599-experienceinyears</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:17.156" level="INFO">${EXPERIENCE_LOCATION} = css=#g2599-experienceinyears</msg>
+<status status="PASS" starttime="20220519 21:28:17.155" endtime="20220519 21:28:17.156"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:17.156" endtime="20220519 21:28:17.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:28:17.447" endtime="20220519 21:28:17.475"/>
+</kw>
+<if>
+<branch type="IF" condition="${EXPERIENCE} == 1">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>0-1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.476" endtime="20220519 21:28:17.476"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>0-1</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.476" endtime="20220519 21:28:17.476"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>0-1</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.477" endtime="20220519 21:28:17.477"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:17.476" endtime="20220519 21:28:17.477"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 2">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>1-3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.477" endtime="20220519 21:28:17.477"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>1-3</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.478" endtime="20220519 21:28:17.478"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>1-3</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.478" endtime="20220519 21:28:17.478"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:17.477" endtime="20220519 21:28:17.478"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 3">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>3-5</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.479" endtime="20220519 21:28:17.479"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>3-5</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.479" endtime="20220519 21:28:17.479"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>3-5</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.479" endtime="20220519 21:28:17.479"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:17.478" endtime="20220519 21:28:17.479"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 4">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>5-7</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.480" endtime="20220519 21:28:17.480"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>5-7</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.480" endtime="20220519 21:28:17.480"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>5-7</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.480" endtime="20220519 21:28:17.481"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:17.480" endtime="20220519 21:28:17.481"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 5">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>7-10</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220519 21:28:17.482" level="INFO">Selecting options from selection list 'css=#g2599-experienceinyears' by value 7-10.</msg>
+<status status="PASS" starttime="20220519 21:28:17.481" endtime="20220519 21:28:17.578"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>7-10</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20220519 21:28:17.578" level="INFO">Verifying list 'css=#g2599-experienceinyears' has option [ 7-10 ] selected.</msg>
+<msg timestamp="20220519 21:28:17.588" level="INFO">Current page contains list 'css=#g2599-experienceinyears'.</msg>
+<status status="PASS" starttime="20220519 21:28:17.578" endtime="20220519 21:28:17.675"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>7-10</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:28:17.676" level="INFO">${EXPERIENCE} = 7-10</msg>
+<status status="PASS" starttime="20220519 21:28:17.675" endtime="20220519 21:28:17.676"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:17.481" endtime="20220519 21:28:17.676"/>
+</branch>
+<branch type="ELSE IF" condition="${EXPERIENCE} == 6">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>10+</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.676" endtime="20220519 21:28:17.676"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${EXPERIENCE_LOCATION}</arg>
+<arg>10+</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.676" endtime="20220519 21:28:17.676"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERIENCE}</arg>
+<arg>10+</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.676" endtime="20220519 21:28:17.676"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:17.676" endtime="20220519 21:28:17.677"/>
+</branch>
+<status status="PASS" starttime="20220519 21:28:17.475" endtime="20220519 21:28:17.677"/>
+</if>
+<status status="PASS" starttime="20220519 21:28:17.154" endtime="20220519 21:28:17.677"/>
+</kw>
+<kw name="AND Choose Expertise" library="FullFormResources">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERTISE}</arg>
+<arg>expertise</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:28:17.678" level="INFO">${EXPERTISE} = expertise</msg>
+<status status="PASS" starttime="20220519 21:28:17.677" endtime="20220519 21:28:17.678"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${FUNCTIONAL_TESTING_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(2) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:17.679" level="INFO">${FUNCTIONAL_TESTING_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(2) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:28:17.678" endtime="20220519 21:28:17.679"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${AUTOMATION_TESTING_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(4) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:17.680" level="INFO">${AUTOMATION_TESTING_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(4) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:28:17.679" endtime="20220519 21:28:17.680"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${MANUAL_TESTING_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(6) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:17.681" level="INFO">${MANUAL_TESTING_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(6) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:28:17.680" endtime="20220519 21:28:17.681"/>
+</kw>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=0</arg>
+<arg>max=1</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:28:17.682" level="INFO">${RANDOMNUMBER} = 0</msg>
+<status status="PASS" starttime="20220519 21:28:17.682" endtime="20220519 21:28:17.682"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${FUNCTIONAL_TESTING_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:17.682" endtime="20220519 21:28:17.959"/>
+</kw>
+<if>
+<branch type="IF" condition="${RANDOMNUMBER} == 1">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${FUNCTIONAL_TESTING_LOCATION}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.959" endtime="20220519 21:28:17.959"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${EXPERTISE}</var>
+<arg>Functional Testing</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:17.959" endtime="20220519 21:28:17.960"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:17.959" endtime="20220519 21:28:17.960"/>
+</branch>
+<status status="PASS" starttime="20220519 21:28:17.959" endtime="20220519 21:28:17.960"/>
+</if>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=0</arg>
+<arg>max=1</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:28:17.960" level="INFO">${RANDOMNUMBER} = 0</msg>
+<status status="PASS" starttime="20220519 21:28:17.960" endtime="20220519 21:28:17.960"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${AUTOMATION_TESTING_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:17.960" endtime="20220519 21:28:18.262"/>
+</kw>
+<if>
+<branch type="IF" condition="${RANDOMNUMBER} == 1">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${AUTOMATION_TESTING_LOCATION}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.262" endtime="20220519 21:28:18.262"/>
+</kw>
+<if>
+<branch type="IF" condition="'${EXPERTISE}' != '${EMPTY}'">
+<kw name="Set Variable" library="BuiltIn">
+<var>${EXPERTISE}</var>
+<arg>Automation Testing</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.262" endtime="20220519 21:28:18.263"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:18.262" endtime="20220519 21:28:18.263"/>
+</branch>
+<branch type="ELSE">
+<kw name="Catenate" library="BuiltIn">
+<arg>${EXPERTISE}</arg>
+<arg>, Automation Testing</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.263" endtime="20220519 21:28:18.263"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:18.263" endtime="20220519 21:28:18.263"/>
+</branch>
+<status status="NOT RUN" starttime="20220519 21:28:18.262" endtime="20220519 21:28:18.263"/>
+</if>
+<status status="NOT RUN" starttime="20220519 21:28:18.262" endtime="20220519 21:28:18.263"/>
+</branch>
+<status status="PASS" starttime="20220519 21:28:18.262" endtime="20220519 21:28:18.263"/>
+</if>
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=0</arg>
+<arg>max=1</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:28:18.263" level="INFO">${RANDOMNUMBER} = 1</msg>
+<status status="PASS" starttime="20220519 21:28:18.263" endtime="20220519 21:28:18.263"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${MANUAL_TESTING_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:18.264" endtime="20220519 21:28:18.546"/>
+</kw>
+<if>
+<branch type="IF" condition="${RANDOMNUMBER} == 1">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${MANUAL_TESTING_LOCATION}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220519 21:28:18.547" level="INFO">Selecting checkbox 'css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap &gt; label:nth-child(6) &gt; input'.</msg>
+<status status="PASS" starttime="20220519 21:28:18.546" endtime="20220519 21:28:18.610"/>
+</kw>
+<if>
+<branch type="IF" condition="'${EXPERTISE}' != '${EMPTY}'">
+<kw name="Set Variable" library="BuiltIn">
+<var>${EXPERTISE}</var>
+<arg>Manual Testing</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220519 21:28:18.612" level="INFO">${EXPERTISE} = Manual Testing</msg>
+<status status="PASS" starttime="20220519 21:28:18.611" endtime="20220519 21:28:18.612"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:18.611" endtime="20220519 21:28:18.612"/>
+</branch>
+<branch type="ELSE">
+<kw name="Catenate" library="BuiltIn">
+<arg>${EXPERTISE}</arg>
+<arg>, Manual Testing</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.612" endtime="20220519 21:28:18.612"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:18.612" endtime="20220519 21:28:18.612"/>
+</branch>
+<status status="PASS" starttime="20220519 21:28:18.611" endtime="20220519 21:28:18.612"/>
+</if>
+<status status="PASS" starttime="20220519 21:28:18.546" endtime="20220519 21:28:18.612"/>
+</branch>
+<status status="PASS" starttime="20220519 21:28:18.546" endtime="20220519 21:28:18.612"/>
+</if>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EXPERTISE}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220519 21:28:18.612" level="INFO">${EXPERTISE} = Manual Testing</msg>
+<status status="PASS" starttime="20220519 21:28:18.612" endtime="20220519 21:28:18.613"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:17.677" endtime="20220519 21:28:18.613"/>
+</kw>
+<kw name="AND Choose Education" library="FullFormResources">
+<kw name="Random Int" library="FakerLibrary">
+<var>${RANDOMNUMBER}</var>
+<arg>min=1</arg>
+<arg>max=3</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<msg timestamp="20220519 21:28:18.614" level="INFO">${RANDOMNUMBER} = 1</msg>
+<status status="PASS" starttime="20220519 21:28:18.614" endtime="20220519 21:28:18.614"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${GRADUATE_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(2) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:18.615" level="INFO">${GRADUATE_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(2) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:28:18.614" endtime="20220519 21:28:18.615"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${UNGRADUATE_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(4) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:18.617" level="INFO">${UNGRADUATE_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(4) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:28:18.616" endtime="20220519 21:28:18.617"/>
+</kw>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${POST_GRADUATE_LOCATION}</arg>
+<arg>css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(6) &gt; input</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:18.618" level="INFO">${POST_GRADUATE_LOCATION} = css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(6) &gt; input</msg>
+<status status="PASS" starttime="20220519 21:28:18.617" endtime="20220519 21:28:18.618"/>
+</kw>
+<if>
+<branch type="IF" condition="${RANDOMNUMBER} == 1">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${GRADUATE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:18.619" endtime="20220519 21:28:18.914"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${GRADUATE_LOCATION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:28:18.914" level="INFO">Clicking element 'css=#contact-form-2599 &gt; form &gt; div.grunion-field-wrap.grunion-field-radio-wrap &gt; label:nth-child(2) &gt; input'.</msg>
+<status status="PASS" starttime="20220519 21:28:18.914" endtime="20220519 21:28:18.955"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${EDUCATION}</var>
+<arg>${GRADUATE_LOCATION}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:28:18.970" level="INFO">${EDUCATION} = Graduate</msg>
+<status status="PASS" starttime="20220519 21:28:18.955" endtime="20220519 21:28:18.970"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:18.618" endtime="20220519 21:28:18.970"/>
+</branch>
+<branch type="ELSE IF" condition="${RANDOMNUMBER} == 2">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${UNGRADUATE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.971" endtime="20220519 21:28:18.971"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UNGRADUATE_LOCATION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.971" endtime="20220519 21:28:18.971"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${EDUCATION}</var>
+<arg>${UNGRADUATE_LOCATION}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.971" endtime="20220519 21:28:18.971"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:18.970" endtime="20220519 21:28:18.971"/>
+</branch>
+<branch type="ELSE IF" condition="${RANDOMNUMBER} == 3">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${POST_GRADUATE_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.971" endtime="20220519 21:28:18.971"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${POST_GRADUATE_LOCATION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.971" endtime="20220519 21:28:18.971"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${EDUCATION}</var>
+<arg>${POST_GRADUATE_LOCATION}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 21:28:18.971" endtime="20220519 21:28:18.971"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 21:28:18.971" endtime="20220519 21:28:18.971"/>
+</branch>
+<status status="PASS" starttime="20220519 21:28:18.618" endtime="20220519 21:28:18.971"/>
+</if>
+<status status="PASS" starttime="20220519 21:28:18.613" endtime="20220519 21:28:18.972"/>
+</kw>
+<kw name="AND Comment" library="FullFormResources">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${COMMENT_LOCATION}</arg>
+<arg>css=#contact-form-comment-g2599-comment</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220519 21:28:18.973" level="INFO">${COMMENT_LOCATION} = css=#contact-form-comment-g2599-comment</msg>
+<status status="PASS" starttime="20220519 21:28:18.972" endtime="20220519 21:28:18.973"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${COMMENT_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:18.973" endtime="20220519 21:28:19.259"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${COMMENT_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:28:19.259" endtime="20220519 21:28:19.274"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${COMMENT_LOCATION}</arg>
+<arg>${COMMENT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:28:19.275" level="INFO">Typing text '['accusamus', 'facilis', 'labore', 'incidunt', 'esse', 'aliquid', 'voluptatem', 'odio', 'sed', 'molestias', 'accusamus', 'magni', 'iste', 'aspernatur', 'architecto', 'perspiciatis', 'blanditiis', 'unde', 'corporis', 'dolorem', 'officia', 'modi', 'harum', 'alias', 'assumenda', 'illum', 'ullam', 'velit', 'voluptas', 'velit', 'inventore', 'quis', 'possimus', 'numquam', 'odit', 'impedit', 'tempora', 'dicta', 'deleniti', 'tenetur', 'deleniti', 'temporibus', 'deserunt', 'assumenda', 'vitae', 'maxime', 'nostrum', 'fuga', 'doloremque', 'quas', 'dolor', 'facere', 'natus', 'pariatur', 'qui', 'architecto', 'ea', 'illum', 'velit', 'veniam', 'dolores', 'molestias', 'ex', 'rem', 'adipisci', 'aut']' into text field 'css=#contact-form-comment-g2599-comment'.</msg>
+<status status="PASS" starttime="20220519 21:28:19.274" endtime="20220519 21:28:19.951"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:18.972" endtime="20220519 21:28:19.951"/>
+</kw>
+<kw name="AND Submit" library="FullFormResources">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${SUBMIT_LOCATION}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220519 21:28:19.951" endtime="20220519 21:28:20.270"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SUBMIT_LOCATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:28:20.270" endtime="20220519 21:28:20.284"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SUBMIT_LOCATION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220519 21:28:20.284" level="INFO">Clicking button 'css=#contact-form-2599 &gt; form &gt; p.contact-submit &gt; button'.</msg>
+<status status="PASS" starttime="20220519 21:28:20.284" endtime="20220519 21:28:20.336"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:19.951" endtime="20220519 21:28:20.336"/>
+</kw>
+<kw name="Then do not Redirect to Success page" library="FullFormResources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://www.globalsqa.com/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220519 21:28:20.680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220519 21:28:20.681" level="FAIL">Location should have been 'https://www.globalsqa.com/' but was 'https://www.globalsqa.com/samplepagetest/'.</msg>
+<status status="FAIL" starttime="20220519 21:28:20.337" endtime="20220519 21:28:20.682"/>
+</kw>
+<status status="FAIL" starttime="20220519 21:28:20.337" endtime="20220519 21:28:20.682"/>
+</kw>
+<kw name="Close Website" library="FullFormResources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:28:20.683" endtime="20220519 21:28:22.987"/>
+</kw>
+<status status="PASS" starttime="20220519 21:28:20.683" endtime="20220519 21:28:22.988"/>
+</kw>
+<status status="FAIL" starttime="20220519 21:27:26.475" endtime="20220519 21:28:22.989">Location should have been 'https://www.globalsqa.com/' but was 'https://www.globalsqa.com/samplepagetest/'.</status>
+</test>
+<status status="FAIL" starttime="20220519 21:27:05.032" endtime="20220519 21:28:22.991"/>
+</suite>
+<status status="FAIL" starttime="20220519 21:27:05.006" endtime="20220519 21:28:22.995"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1" name="FormPage">Tests.FormPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
