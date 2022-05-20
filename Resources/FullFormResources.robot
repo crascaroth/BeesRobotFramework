@@ -36,8 +36,7 @@ Given Client in page ${URL} with ${BROWSER}
     Set Global Variable    ${NAME}
     Set Global Variable    ${EMAIL}
     Set Global Variable    ${EXPERIENCE} 
-    Set Global Variable    ${EDUCATION}      aa
-
+    Set Global Variable    ${EDUCATION}      ${EMPTY}
     Set Global Variable    ${COMMENT} 
     Set Global Variable    ${SUBMIT_LOCATION}    css=#contact-form-2599 > form > p.contact-submit > button
 
@@ -101,7 +100,7 @@ AND Choose Experience
 
 
 AND Choose Expertise
-    Set Global Variable    ${EXPERTISE}    expertise
+    Set Global Variable    ${EXPERTISE}    ${EMPTY}
 
     Set Local Variable    ${FUNCTIONAL_TESTING_LOCATION}    css=#contact-form-2599 > form > div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap > label:nth-child(2) > input
     Set Local Variable    ${AUTOMATION_TESTING_LOCATION}    css=#contact-form-2599 > form > div.grunion-field-wrap.grunion-field-checkbox-multiple-wrap > label:nth-child(4) > input
@@ -121,21 +120,21 @@ AND Choose Expertise
     Scroll Element Into View    ${AUTOMATION_TESTING_LOCATION}
     IF                          ${RANDOMNUMBER} == 1
     Select Checkbox             ${AUTOMATION_TESTING_LOCATION}
-    IF                          '${EXPERTISE}'!='${EMPTY}'
+    IF                          '${EXPERTISE}' == '${EMPTY}'
     ${EXPERTISE}                Set Variable                      Automation Testing
     ELSE
-    Catenate                    ${EXPERTISE}                      , Automation Testing    
+    ${EXPERTISE}=  Catenate                   SEPARATOR=   ${EXPERTISE}                      , Automation Testing    
     END
     END
 
-    ${RANDOMNUMBER}             FakerLibrary.Random Int       min=0               max=1
+    ${RANDOMNUMBER}             FakerLibrary.Random Int         min=0               max=1
     Scroll Element Into View    ${MANUAL_TESTING_LOCATION}
     IF                          ${RANDOMNUMBER} == 1
     Select Checkbox             ${MANUAL_TESTING_LOCATION}
-    IF                          '${EXPERTISE}'!='${EMPTY}'
-    ${EXPERTISE}                Set Variable                  Manual Testing
+    IF                          '${EXPERTISE}' == '${EMPTY}'
+    ${EXPERTISE}                Set Variable                    Manual Testing
     ELSE
-    Catenate                    ${EXPERTISE}                  , Manual Testing    
+    ${EXPERTISE}=  Catenate                   SEPARATOR=   ${EXPERTISE}                    , Manual Testing    
     END
 
     END
@@ -146,9 +145,9 @@ AND Choose Education
 
     ${RANDOMNUMBER}    FakerLibrary.Random Int    min=1    max=3
 
-    Set Local Variable    ${GRADUATE_LOCATION}         css=#contact-form-2599 > form > div.grunion-field-wrap.grunion-field-radio-wrap > label:nth-child(2) > input
-    Set Local Variable    ${UNGRADUATE_LOCATION}       css=#contact-form-2599 > form > div.grunion-field-wrap.grunion-field-radio-wrap > label:nth-child(4) > input
-    Set Local Variable    ${POST_GRADUATE_LOCATION}    css=#contact-form-2599 > form > div.grunion-field-wrap.grunion-field-radio-wrap > label:nth-child(6) > input
+    Set Local Variable    ${GRADUATE_LOCATION}              css=#contact-form-2599 > form > div.grunion-field-wrap.grunion-field-radio-wrap > label:nth-child(2) > input
+    Set Local Variable    ${POST_GRADUATE_LOCATION}         css=#contact-form-2599 > form > div.grunion-field-wrap.grunion-field-radio-wrap > label:nth-child(4) > input
+    Set Local Variable    ${OTHER_LOCATION}                 css=#contact-form-2599 > form > div.grunion-field-wrap.grunion-field-radio-wrap > label:nth-child(6) > input
 
 
 
@@ -158,18 +157,24 @@ AND Choose Education
     Click Element               ${GRADUATE_LOCATION}
     ${EDUCATION}=               Get Value               ${GRADUATE_LOCATION}
 
-    ELSE IF                     ${RANDOMNUMBER} == 2
-    Scroll Element Into View    ${UNGRADUATE_LOCATION}
-    Click Element               ${UNGRADUATE_LOCATION}
-    ${EDUCATION}=               Get Value                 ${UNGRADUATE_LOCATION}
 
-    ELSE IF                     ${RANDOMNUMBER} == 3
+    ELSE IF                     ${RANDOMNUMBER} == 2
     Scroll Element Into View    ${POST_GRADUATE_LOCATION}
     Click Element               ${POST_GRADUATE_LOCATION}
     ${EDUCATION}=               Get Value                    ${POST_GRADUATE_LOCATION}
 
+
+    ELSE IF                     ${RANDOMNUMBER} == 3
+    Scroll Element Into View    ${OTHER_LOCATION}
+    Click Element               ${OTHER_LOCATION}
+    ${EDUCATION}=               Get Value                 ${OTHER_LOCATION}
+
+    
+
     END
 
+
+    Set Global Variable         ${EDUCATION}
 
 AND Comment
     Set Local Variable    ${COMMENT_LOCATION}    css=#contact-form-comment-g2599-comment
@@ -203,7 +208,9 @@ Then Redirected to Success page
     Element Text Should Be    ${WEBSITE_FINISH_LOCATION}       Website: ${WEBSITE}
     Element Text Should Be    ${EXPERIENCE_FINISH_LOCATION}    Experience (In Years): ${EXPERIENCE}
     Element Text Should Be    ${EXPERTISE_FINISH_LOCATION}     Expertise :: ${EXPERTISE}
+    Element Text Should Be    ${EDUCATION_FINISH_LOCATION}     Education: ${EDUCATION}
+    Element Text Should Be    ${COMMENT_FINISH_LOCATION}       Comment: ${COMMENT}
 
 
 Then do not Redirect to Success page
-    Location Should Be       https://www.globalsqa.com/
+    Location Should Be    https://www.globalsqa.com/samplepagetest/
